@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application1</title>
+<link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+    <h2>Digital Communication System Design and Analysis.</h2>
+    <form id="calculator">
+        <label for="bandWidth">Bandwidth:</label>
+        <input type="number" id="bandWidth" name="bandWidth" required>
+        <span id="errorBandwidth" class="error"></span>
+        
+        <label for="bitQuantizer">Number of bits for quantizer:</label>
+        <input type="number" id="bitQuantizer" name="bitQuantizer" required>
+        <span id="errorBitQuantizer" class="error"></span>
+        
+        <label for="sourceEncoderRate">Source encoder rate:</label>
+        <input type="number" id="sourceEncoderRate" name="sourceEncoderRate" step="any" required>
+        <span id="errorSourceEncoderRate" class="error"></span>
+        
+        <label for="channelEncoderRate">Channel encoder rate:</label>
+        <input type="number" id="channelEncoderRate" name="channelEncoderRate" step="any" required>
+        <span id="errorChannelEncoderRate" class="error"></span>
+        
+        <label for="interleaverBits">Number of bits for interleaver:</label>
+        <input type="number" id="interleaverBits" name="interleaverBits" required>
+        <span id="errorInterleaverBits" class="error"></span>
+        <div>
+            <input type="button" value="Calculate" onclick="performCalculations()">
+            <input type="button" value="Back" onclick="window.history.back();">
+        </div>        
+    </form>
+    <div id="results"></div>
+
+    <script src="./index.js">
+        
+    </script>
+</body>
+</html>

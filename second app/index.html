@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application2</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h2>4G LTE OFDM Transmission Rate Calculator</h2>
+    <form id="ofdmCalculator">
+        <div>
+            <label for="bandwidth">Bandwidth (kHz):</label>
+            <input type="number" id="bandwidth" required>
+            <span class="error" id="errorBandwidth"></span>
+        </div>
+        <div>
+            <label for="subcarrierSpacing">Subcarrier Spacing (kHz):</label>
+            <input type="number" id="subcarrierSpacing" required>
+            <span class="error" id="errorSubcarrierSpacing"></span>
+        </div>
+        <div>
+            <label for="numOfdmsymbols">Number of OFDM Symbols:</label>
+            <input type="number" id="numOfdmsymbols" required>
+            <span class="error" id="errorNumOfdmsymbols"></span>
+        </div>
+        <div>
+            <label for="resourceBlockDuration">Duration of the Resource Block (ms):</label>
+            <input type="number" id="resourceBlockDuration" step="any" required>
+            <span class="error" id="errorResourceBlockDuration"></span>
+        </div>
+        <div>
+            <label for="qamBits">Number of QAM Bits:</label>
+            <input type="number" id="qamBits" required>
+            <span class="error" id="errorQamBits"></span>
+        </div>
+        <div>
+            <label for="parallelResourceBlocks">Number of Parallel Resource Blocks:</label>
+            <input type="number" id="parallelResourceBlocks" required>
+            <span class="error" id="errorParallelResourceBlocks"></span>
+        </div>
+        <div>
+            <input type="button" value="Calculate" onclick="performCalculations()">
+            <input type="button" value="Back" onclick="window.history.back();">
+        </div>
+    </form>
+    <div id="results"></div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Application5</title>
+<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h2>Cellular System Calculator</h2>
+    <form id="networkForm">
+        <label for="timeslots">Number of timeslots per carrier</label>
+        <input type="number" id="timeslots" required>
+
+
+        <label for="area">Area of the city (m²):</label>
+        <input type="number" id="area" required>
+        <span class="error" id="errorarea"></span>
+
+
+        <label for="subcarriers">Number of subcarriers:</label>
+        <input type="number" id="subcarriers" required>
+        <span class="error" id="errorsubcarriers"></span>
+
+        <label for="callsPerDay">Number of calls per day:</label>
+        <input type="number" id="callsPerDay" required>
+        <span class="error" id="errorcallsPerDay"></span>
+
+        <label for="callDuration">Average call duration (minutes):</label>
+        <input type="number" id="callDuration" required>
+        <span class="error" id="errorcallDuration"></span>
+
+        <label for="callDropProbability">Call drop probability: (0.1%, 0.2%, 0.5%, 1% ,1.2% ,1.3%, 1.5%, 2%, 3%, 5%, 7%, 10%, 15%, 20%, 30%)</label>
+        <input type="number" id="callDropProbability" step="any" required>
+
+        <label for="minimumSIR">Minimum SIR needed:</label>
+        <select id="minimumSIRUnit">
+            <option value="dB">dB</option>
+            <option value="watt">Watt</option>
+            <option value="dBm">dBm</option>
+          </select>
+        <input type="number" id="minimumSIR" required>
+
+
+        <label for="baseStationDistance">Distance from base station (m):</label>
+        <input type="number" id="baseStationDistance" required>
+        <span class="error" id="errorbaseStationDistance"></span>
+
+        <label for="referencePower">Power measured at reference distance:</label>
+        <select id="referencePowerUnit">
+            <option value="dB">dB</option>
+            <option value="watt">Watt</option>
+            <option value="dBm">dBm</option>
+          </select>
+        <input type="number" id="referencePower" step="any" required>
+
+        <label for="pathLossExponent">Path loss exponent:</label>
+        <input type="number" id="pathLossExponent" step="any" required>
+
+        <label for="receiverSensitivity">Receiver sensitivity (μW):</label>
+        <input type="number" id="receiverSensitivity" required>
+
+        <div>
+            <input type="button" value="Calculate" onclick="performCalculations()">
+            <input type="button" value="Back" onclick="window.history.back();">
+        </div>   
+         
+
+    </form>
+    <div id="results"></div>
+    <script src="./index.js"></script>
+</body>
+</html>

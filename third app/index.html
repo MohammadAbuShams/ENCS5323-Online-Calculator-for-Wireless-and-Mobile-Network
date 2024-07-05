@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application3</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h2>Transmit Power Calculator</h2>
+    <form id="transmitPowerForm">
+      <div>
+        <label for="pathLoss">Path Loss:</label>
+        <select id="pathLossUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="pathLossValue" step="any" required />
+        <span class="error" id="errorPathLoss"></span>
+      </div>
+      <div>
+        <label for="frequency">Frequency (MHz):</label>
+        <input type="number" id="frequency" step="any" required />
+        <span class="error" id="errorFrequency"></span>
+      </div>
+      <div>
+        <label for="transmitGain">Transmit Antenna Gain:</label>
+        <select id="transmitGainUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="transmitGainValue" step="any" required />
+        <span class="error" id="errorTransmitGain"></span>
+      </div>
+      <div>
+        <label for="receiveGain">Receive Antenna Gain:</label>
+        <select id="receiveGainUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="receiveGainValue" step="any" required />
+        <span class="error" id="errorReceiveGain"></span>
+      </div>
+
+      <div>
+        <label for="dataRate">Data Rate (kbps):</label>
+        <input type="number" id="dataRate" step="any" required />
+        <span class="error" id="errorDataRate"></span>
+      </div>
+      <div>
+        <label for="feedLoss">Antenna Feed Line Loss:</label>
+        <select id="feedLossUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="feedLoss" step="any" required />
+        <span class="error" id="errorFeedLoss"></span>
+      </div>
+
+      <div>
+        <label for="otherLosses">Other Losses:</label>
+        <select id="otherLossesUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="otherLosses" step="any" required />
+        <span class="error" id="errorOtherLosses"></span>
+      </div>
+
+      <div>
+        <label for="fadeMargin">Fade Margin:</label>
+        <select id="fadeMarginUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="fadeMargin" step="any" required />
+        <span class="error" id="errorFadeMargin"></span>
+      </div>
+
+      <div>
+        <label for="amplifierGain">Receiver Amplifier Gain:</label>
+        <select id="amplifierGainUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="amplifierGain" step="any" required />
+        <span class="error" id="errorAmplifierGain"></span>
+      </div>
+
+      <div>
+        <label for="noiseFigure">Noise Figure:</label>
+        <select id="noiseFigureUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="noiseFigure" step="any" required />
+        <span class="error" id="errorNoiseFigure"></span>
+      </div>
+
+      <div>
+        <label for="noiseTemperature">Noise Temperature (K):</label>
+        <input type="number" id="noiseTemperature" step="any" required />
+        <span class="error" id="errorNoiseTemperature"></span>
+      </div>
+
+      <div>
+        <label for="linkMargin">Link Margin:</label>
+        <select id="linkMarginUnit">
+          <option value="dB">dB</option>
+          <option value="watt">Watt</option>
+          <option value="dBm">dBm</option>
+        </select>
+        <input type="number" id="linkMargin" step="any" required />
+        <span class="error" id="errorLinkMargin"></span>
+      </div>
+
+      <div>
+        <label for="modulationType">Modulation Type:</label>
+        <select id="modulationType">
+          <option value="BPSK/QPSK">BPSK/QPSK</option>
+          <option value="8-PSK">8-PSK</option>
+          <option value="16-PSK">16-PSK</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="bitErrorRate"
+          >Maximum bit error rate [0.1, 0.01, 0.001, 0.0001, 0.00001, 0.000001,
+          0.0000001] any other value consider as zero Eb/No</label
+        >
+        <input type="number" id="bitErrorRate" step="any" required />
+        <span class="error" id="errorLinkMargin"></span>
+      </div>
+
+      <div>
+        <input
+          id="calculateBtn"
+          type="button"
+          value="Calculate"
+          onclick="performCalculations()"
+        />
+        <input type="button" value="Back" onclick="window.history.back();" />
+      </div>
+    </form>
+    <div id="results"></div>
+    <script src="./index.js"></script>
+  </body>
+</html>

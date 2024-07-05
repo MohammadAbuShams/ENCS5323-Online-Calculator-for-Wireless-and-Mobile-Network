@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application4</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h2>Network Throughput Calculator</h2>
+    <form id="networkForm">
+        <div>
+            <label for="bandwidth">Data Transmission Bandwidth (Mbps):</label>
+            <input type="number" id="bandwidth" step="any" required>
+            <span class="error" id="errorBandwidth"></span>
+        </div>
+        <div>
+            <label for="protocolType">Protocol Type:</label>
+            <select id="protocolType">
+                <option value="pureALOHA">Pure ALOHA</option>
+                <option value="slottedALOHA">Slotted ALOHA</option>
+                <option value="unslottedCSMA">Unslotted Nonpersistent CSMA</option>
+                <option value="slottedCSMA">Slotted Nonpersistent CSMA</option>
+                <option value="unslotted1-persistentCSMA">Unslotted 1-persistent CSMA</option>
+                <option value="slotted1-persistentCSMA">Slotted 1-persistent CSMA</option>
+
+                
+            </select>
+        </div>
+        <div>
+            <label for="propagationDelay">Maximum Signal Propagation Delay (μsec):</label>
+            <input type="number" id="propagationDelay" step="any" required>
+            <span class="error" id="errorPropagationDelay"></span>
+        </div>
+        <div>
+            <label for="frameSize">Frame Size (Kbits):</label>
+            <input type="number" id="frameSize" required>
+            <span class="error" id="errorFrameSize"></span>
+        </div>
+        <div>
+            <label for="frameRate">Frame Rate (Kfps):</label>
+            <input type="number" id="frameRate" step="any" required>
+            <span class="error" id="errorFrameRate"></span>
+        </div>
+
+        <div>
+            <input type="button" value="Calculate" onclick="calculateThroughput()">
+            <input type="button" value="Back" onclick="window.history.back();">
+
+        </div>   
+         
+       
+    </form>
+    <div id="results"></div>
+    <script src="./index.js"></script>
+</body>
+</html>

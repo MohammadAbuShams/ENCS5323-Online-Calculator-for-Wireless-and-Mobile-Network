@@ -27,3 +27,9 @@ The ENCS5323 Online Calculator facilitates calculations across five different as
 
 - **HTML/CSS/JavaScript**: For building the frontend interface and ensuring interactive and responsive design.
 
+## Contributors
+- [Mohammad AbuShams](https://github.com/MohammadAbuShams)
+- [Hussain Radwan](https://github.com/HussainRadwan)
+
+
+

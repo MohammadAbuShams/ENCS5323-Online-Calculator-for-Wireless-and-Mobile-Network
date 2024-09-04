@@ -9,13 +9,13 @@ The ENCS5323 Online Calculator facilitates calculations across five different as
 ## Features
 
 1. **Communication System Components Calculation**:
-   - Calculate the number of bits and rates for samplers, quantizers, source encoders, channel encoders, and interleavers.
+   - Calculate the number of bits and rates for samplers, quantizers, source encoders, channel encoders, and interleaves.
 
 2. **OFDM System Calculations**:
    - Determine the number of bits and rates for resource elements, OFDM symbols, Resource Blocks, and maximum transmission capabilities using parallel resource blocks.
 
 3. **Power Transmission Calculations**:
-   - Compute the power transmitted in a flat environment based on given transmitter and receiver specifications.
+   - Compute the power transmitted in a flat environment based on the given transmitter and receiver specifications.
 
 4. **Throughput Calculations for Multiple Access Techniques**:
    - Analyze throughput in percentage terms for various multiple access techniques.
@@ -23,13 +23,14 @@ The ENCS5323 Online Calculator facilitates calculations across five different as
 5. **Cellular System Design**:
    - Aid in the design of cellular systems with considerations for various network parameters and infrastructure needs.
 
+## Live Demo
+
+Access the live version of the calculator here: [ENCS5323 Online Calculator](https://mohammadabushams.github.io/ENCS5323-Online-Calculator-for-Wireless-and-Mobile-Network/)
+
 ## Technologies Used
 
 - **HTML/CSS/JavaScript**: For building the frontend interface and ensuring interactive and responsive design.
 
 ## Contributors
 - [Mohammad AbuShams](https://github.com/MohammadAbuShams)
-- [Hussain Radwan](https://github.com/HussainRadwan)
-
-
-
+- [Hussein Radwan](https://github.com/HussainRadwan)
